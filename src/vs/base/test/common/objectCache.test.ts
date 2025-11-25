@@ -6,9 +6,9 @@
 import assert from 'assert';
 import { spy } from 'sinon';
 import { ObjectCache } from '../../common/objectCache.js';
-import { wait } from '../../../base/test/common/testUtils.js';
+import { wait } from './testUtils.js';
 import { ObservableDisposable } from '../../common/observableDisposable.js';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../base/test/common/utils.js';
+import { ensureNoDisposablesAreLeakedInTestSuite } from './utils.js';
 
 /**
  * Test object class.

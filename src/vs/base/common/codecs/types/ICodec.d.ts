@@ -1,4 +1,4 @@
-import { ReadableStream } from '../../stream.js';
+import { ReadableStream } from '../../stream.ts';
 
 /**
  * A codec is an object capable of encoding/decoding a stream of data transforming its messages.

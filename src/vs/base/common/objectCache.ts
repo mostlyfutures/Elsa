@@ -3,7 +3,7 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Disposable, DisposableMap } from '../../base/common/lifecycle.js';
+import { Disposable, DisposableMap } from './lifecycle.js';
 import { ObservableDisposable, assertNotDisposed } from './observableDisposable.js';
 
 /**

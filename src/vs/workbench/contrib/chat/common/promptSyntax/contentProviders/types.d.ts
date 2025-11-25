@@ -3,10 +3,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { URI } from '../../../../../../base/common/uri.js';
-import { ResolveError } from '../../promptFileReferenceErrors.js';
-import { IDisposable } from '../../../../../../base/common/lifecycle.js';
-import { VSBufferReadableStream } from '../../../../../../base/common/buffer.js';
+import { URI } from '../../../../../../base/common/uri.ts';
+import { ResolveError } from '../../promptFileReferenceErrors.ts';
+import { IDisposable } from '../../../../../../base/common/lifecycle.ts';
+import { VSBufferReadableStream } from '../../../../../../base/common/buffer.ts';
 
 /**
  * Interface for a prompt contents provider. Prompt contents providers are

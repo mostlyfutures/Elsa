@@ -17,11 +17,11 @@ import { GroupsOrder, IEditorGroupsService } from '../../../../services/editor/c
 import { ITextFileService } from '../../../../services/textfile/common/textfiles.js';
 import { CellUri } from '../../../notebook/common/notebookCommon.js';
 import { INotebookService } from '../../../notebook/common/notebookService.js';
-import { ICodeMapperService } from '../../common/chatCodeMapperService.js';
-import { ChatModel } from '../../common/chatModel.js';
-import { IChatService } from '../../common/chatService.js';
-import { ILanguageModelIgnoredFilesService } from '../../common/ignoredFiles.js';
-import { CountTokensCallback, IPreparedToolInvocation, IToolData, IToolImpl, IToolInvocation, IToolResult } from '../../common/languageModelToolsService.js';
+import { ICodeMapperService } from '../chatCodeMapperService.js';
+import { ChatModel } from '../chatModel.js';
+import { IChatService } from '../chatService.js';
+import { ILanguageModelIgnoredFilesService } from '../ignoredFiles.js';
+import { CountTokensCallback, IPreparedToolInvocation, IToolData, IToolImpl, IToolInvocation, IToolResult } from '../languageModelToolsService.js';
 import { IToolInputProcessor } from './tools.js';
 
 const codeInstructions = `

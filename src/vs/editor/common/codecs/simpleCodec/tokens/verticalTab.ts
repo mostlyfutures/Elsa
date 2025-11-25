@@ -5,8 +5,8 @@
 
 import { BaseToken } from '../../baseToken.js';
 import { Line } from '../../linesCodec/tokens/line.js';
-import { Range } from '../../../../../editor/common/core/range.js';
-import { Position } from '../../../../../editor/common/core/position.js';
+import { Range } from '../../../core/range.js';
+import { Position } from '../../../core/position.js';
 
 /**
  * Token that represent a `vertical tab` with a `range`. The `range`

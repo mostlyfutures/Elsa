@@ -10,7 +10,7 @@
 	// Add a perf entry right from the top
 	performance.mark('code/didStartRenderer');
 
-	type INativeWindowConfiguration = import('../../../platform/window/common/window.ts').INativeWindowConfiguration;
+	type INativeWindowConfiguration = import('../../../platform/window/common/window.js').INativeWindowConfiguration;
 	type IBootstrapWindow = import('../../../platform/window/electron-sandbox/window.js').IBootstrapWindow;
 	type IMainWindowSandboxGlobals = import('../../../base/parts/sandbox/electron-sandbox/globals.js').IMainWindowSandboxGlobals;
 	type IDesktopMain = import('../../../workbench/electron-sandbox/desktop.main.js').IDesktopMain;
