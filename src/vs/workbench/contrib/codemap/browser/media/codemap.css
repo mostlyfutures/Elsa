@@ -1,0 +1,145 @@
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) 2025 Your Company. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.codemap-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.codemap-message {
+    padding: 20px;
+    text-align: center;
+    color: var(--vscode-descriptionForeground);
+    font-style: italic;
+    user-select: none;
+}
+
+/* Graph visualization container */
+.codemap-graph {
+    flex: 1;
+    position: relative;
+    overflow: auto;
+}
+
+/* Node styling */
+.codemap-node {
+    position: absolute;
+    padding: 8px 12px;
+    border-radius: 4px;
+    background-color: var(--vscode-editor-background);
+    border: 1px solid var(--vscode-panel-border);
+    box-shadow: 0 2px 8px var(--vscode-widget-shadow);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: var(--vscode-font-family);
+    font-size: var(--vscode-font-size);
+    color: var(--vscode-foreground);
+}
+
+.codemap-node:hover {
+    box-shadow: 0 4px 12px var(--vscode-widget-shadow);
+    transform: translateY(-1px);
+}
+
+.codemap-node.selected {
+    border-color: var(--vscode-focusBorder);
+    box-shadow: 0 0 0 1px var(--vscode-focusBorder);
+}
+
+/* Edge styling */
+.codemap-edge {
+    position: absolute;
+    pointer-events: none;
+    stroke: var(--vscode-editor-foreground);
+    stroke-width: 1.5;
+    fill: none;
+    stroke-opacity: 0.3;
+}
+
+/* Toolbar */
+.codemap-toolbar {
+    display: flex;
+    padding: 4px;
+    background-color: var(--vscode-editor-background);
+    border-bottom: 1px solid var(--vscode-panel-border);
+}
+
+.codemap-toolbar .codicon {
+    margin: 0 4px;
+    padding: 4px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.codemap-toolbar .codicon:hover {
+    background-color: var(--vscode-toolbar-hoverBackground);
+}
+
+/* Search box */
+.codemap-search {
+    flex: 1;
+    margin: 4px;
+    padding: 4px 8px;
+    border: 1px solid var(--vscode-input-border);
+    background-color: var(--vscode-input-background);
+    color: var(--vscode-input-foreground);
+    border-radius: 2px;
+}
+
+/* Legend */
+.codemap-legend {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--vscode-editor-background);
+    border: 1px solid var(--vscode-panel-border);
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 12px;
+    z-index: 1000;
+}
+
+.codemap-legend-item {
+    display: flex;
+    align-items: center;
+    margin: 4px 0;
+}
+
+.codemap-legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+/* Responsive design */
+@media (max-width: 800px) {
+    .codemap-toolbar {
+        flex-wrap: wrap;
+    }
+    
+    .codemap-search {
+        order: -1;
+        width: 100%;
+        margin-bottom: 4px;
+    }
+}
+
+/* Animation for loading state */
+@keyframes codemap-pulse {
+    0% { opacity: 0.4; }
+    50% { opacity: 1; }
+    100% { opacity: 0.4; }
+}
+
+.codemap-loading {
+    animation: codemap-pulse 1.5s ease-in-out infinite;
+    text-align: center;
+    padding: 20px;
+    color: var(--vscode-descriptionForeground);
+}
